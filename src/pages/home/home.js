@@ -1,0 +1,71 @@
+import React from 'react';
+import './home.css';
+import Header from '../../components/header/header';
+import Footer from '../../components/footer/footer';
+import gallery from '../../data/gallery';
+
+const Home = () => {
+
+
+
+
+
+    
+    return (
+        <>
+            <Header />
+            <div className='home-hero-wrapper'></div>
+            <div style={{ padding: '20px', textAlign: 'center' }} className='home-intro-wrapper'>
+                <h1>LB Tile Company</h1><p>
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+                <ul>
+                    <li>
+                        <button className='home-cta-button'>Get a Quote</button>
+                    </li>
+                    <li>
+                        <button className='home-cta-button'>View Gallery</button>
+                    </li>
+                </ul>
+            </div>
+            <div className='featured-projects-wrapper'>
+                <h2>Featured Projects</h2>
+                <ul className='featured-projects-list'>
+                    {
+                        gallery.filter(item => item.featured).map((item, index) => (
+                            <li key={index} className="featured-project-item">
+                                <img src={item.imgUrl} alt={item.title} />
+                                <div className="featured-project-info">
+                                    {/* <h3>{item.title}</h3> */}
+                                    {/* <p>{item.description}</p> */}
+                                </div>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+            <div className='cx-reviews-wrapper'>
+                <h2>What Our Clients Say</h2>
+                <div className='cx-review-item'>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+                    <span>- Jane Doe</span>
+                </div>
+                <div className='cx-review-item'>
+                    <p>"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+                    <span>- John Smith</span>
+                </div>
+                <div className='cx-review-item'>
+                    <p>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</p>
+                    <span>- Sarah Johnson</span>
+                </div>
+            </div>
+            <Footer></Footer>
+        </>
+    );
+};
+
+export default Home;

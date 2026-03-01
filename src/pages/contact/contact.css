@@ -1,0 +1,118 @@
+
+.contact-page-wrapper form {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    max-width: 800px;
+    margin: 0 auto;
+    /* align-items: center; */
+    justify-content: center;
+    margin: 200px auto;
+    text-align: center;
+}
+
+.contact-page-wrapper form h1 {
+    text-align: center;
+    margin-bottom: 4rem;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+}
+
+.contact-page-wrapper form input {
+    padding: 0.4rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    /* border-radius: 4px; */
+    font-size: 1.4rem;
+    border: none;
+    width: 80%;
+    border-bottom: 2px solid var(--primary-color);
+    outline: none;
+}
+
+.contact-page-wrapper form textarea {
+    padding: 0.4rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    /* border-radius: 4px; */
+    font-size: 1.4rem;
+    border: none;
+    width: 80%;
+    height: 150px;
+    border: 2px solid var(--primary-color);
+    resize: none;
+}
+
+.contact-page-wrapper form button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    width: 83%;
+    margin: 0 auto;
+}
+.contact-page-wrapper form button:hover {
+    background-color: #005bb5;
+    /* transform: scale(1.05); */
+}
+
+.social-media-links-wrapper {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.social-media-links-wrapper ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 8rem;
+}
+
+.social-media-links-wrapper ul div {
+    background-color: var(--primary-color);
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-media-links-wrapper ul div a {
+    color: white;
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+
+.social-media-links-wrapper ul div:hover {
+    /* background-color: #005bb5; */
+    transform: rotate(-45deg);
+    
+}
+
+.social-media-links-wrapper ul div:hover a {
+    transform: rotate(45deg);
+}
+
+
+@media (max-width: 768px) {
+    .contact-page-wrapper form {
+        width: 90vw;
+        margin: 100px auto;
+    }
+
+    .contact-page-wrapper form input,
+    .contact-page-wrapper form textarea,
+    .contact-page-wrapper form button {
+        width: 90%;
+    }
+
+    .social-media-links-wrapper ul {
+        gap: 2rem;
+    }
+}

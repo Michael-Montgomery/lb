@@ -1,24 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <HashRouter basename='/'>
+    <Routes>
+      <Route path='/' element={require('./pages/home/home').default()} />
+      <Route path='/about' element={require('./pages/about/about').default()} />
+      <Route path='/careers' element={require('./pages/careers/careers').default()} />
+      <Route path='/gallery' element={require('./pages/gallery/gallery').default()} />
+      <Route path='/contact' element={require('./pages/contact/contact').default()} />
+      <Route path='*' element={<div><h1>404 Not Found</h1><p>The page you are looking for does not exist.</p></div>} />
+    </Routes>
+   </HashRouter>
   );
 }
 

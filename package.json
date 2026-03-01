@@ -1,8 +1,14 @@
 {
+  "homepage": "https://michaelmontgomery.github.io/lb",
   "name": "lb",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^7.0.1",
+    "@fortawesome/free-brands-svg-icons": "^7.0.1",
+    "@fortawesome/free-regular-svg-icons": "^7.0.1",
+    "@fortawesome/free-solid-svg-icons": "^7.0.1",
+    "@fortawesome/react-fontawesome": "^3.0.2",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.6.4",
     "@testing-library/react": "^16.3.0",
@@ -13,6 +19,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -35,5 +43,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "react-router-dom": "^7.7.1"
+  },
+  "packageManager": "npm@11.8.0+sha512.9f5f6c25e5be44629d907a3c482739c614b090a8505057d9685cd273e12c6172e34aa215d2d97bd9a0d8415bb356f7eb6f2b06c1d690b0d2cdcb9f09d7410149"
 }
