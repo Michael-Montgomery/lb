@@ -3,9 +3,20 @@ import './home.css';
 import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
 import gallery from '../../data/gallery';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
 
+    const navigate = useNavigate();
+
+
+    const handleGetQuoteClick = () => {
+        navigate('/contact');
+    };
+
+    const handleViewGalleryClick = () => {
+        navigate('/gallery');
+    };
 
 
 
@@ -25,10 +36,10 @@ const Home = () => {
                 </p>
                 <ul>
                     <li>
-                        <button className='home-cta-button'>Get a Quote</button>
+                        <button className='home-cta-button' onClick={handleGetQuoteClick}>Get a Quote</button>
                     </li>
                     <li>
-                        <button className='home-cta-button'>View Gallery</button>
+                        <button className='home-cta-button' onClick={handleViewGalleryClick}>View Gallery</button>
                     </li>
                 </ul>
             </div>
