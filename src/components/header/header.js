@@ -38,7 +38,7 @@ const Header = () => {
         </div>
       </nav>
       {mobileMenuOpen && (
-        <div className="mobile-nav-links">
+        <div className="mobile-nav-links" style={{ height: mobileMenuOpen ? '200px' : '0' }}>
           <NavLink to="/" onClick={() => setMobileMenuOpen(false)}>Home</NavLink>
           <NavLink to="/about" onClick={() => setMobileMenuOpen(false)}>About</NavLink>
           <NavLink to="/careers" onClick={() => setMobileMenuOpen(false)}>Careers</NavLink>

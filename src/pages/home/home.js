@@ -4,6 +4,7 @@ import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
 import gallery from '../../data/gallery';
 import { useNavigate } from 'react-router-dom';
+import reviews from '../../data/reviews';
 
 const Home = () => {
 
@@ -21,7 +22,7 @@ const Home = () => {
 
 
 
-    
+
     return (
         <>
             <Header />
@@ -60,19 +61,21 @@ const Home = () => {
                 </ul>
             </div>
             <div className='cx-reviews-wrapper'>
-                <h2>What Our Clients Say</h2>
+                <h2>What Our Clients are Saying</h2>
                 <div className='cx-review-item'>
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-                    <span>- Jane Doe</span>
+                    
+                    <ul className='cx-reviews-list'>
+                        {reviews.map((review, index) => (
+                            <li key={index} className="review-item">
+                                <div>
+                                    <p>"{review.review}"</p>
+                                    <span>- {review.name}</span>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
-                <div className='cx-review-item'>
-                    <p>"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
-                    <span>- John Smith</span>
-                </div>
-                <div className='cx-review-item'>
-                    <p>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</p>
-                    <span>- Sarah Johnson</span>
-                </div>
+
             </div>
             <Footer></Footer>
         </>
