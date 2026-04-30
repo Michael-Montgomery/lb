@@ -17,6 +17,7 @@
     display: inline;
     margin: 0 4em;
     font-size: 1.4em;
+    color: var(--primary-color);
     
 }
 

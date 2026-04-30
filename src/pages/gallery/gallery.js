@@ -52,9 +52,9 @@ const filterGallery = (e, isDropdown) => {
             <option value="All">All</option>
             <option value="Kitchen">Kitchen</option>
             <option value="Bathroom">Bathroom</option>
-            <option value="Fireplace">Fireplace</option>
-            <option value="Outdoor">Outdoor</option>
-            <option value="Commercial">Commercial</option>
+            {/* <option value="Fireplace">Fireplace</option> */}
+            {/* <option value="Outdoor">Outdoor</option> */}
+            <option value="Other">Other</option>
            </select>
            {/* <hr></hr> */}
               <div className='gallery-images-wrapper'>
