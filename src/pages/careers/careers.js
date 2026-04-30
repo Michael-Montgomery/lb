@@ -4,8 +4,27 @@ import './careers.css';
 import { faDollarSign, faSun } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import Footer from '../../components/footer/footer';
+import emailjs from '@emailjs/browser';
 
 const Careers = () => {
+
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+      
+        emailjs.sendForm(
+          'service_l3i6sll',
+          'template_rj5yw7c',
+          e.target,
+          '8zMjLYXj4OH59op-A'
+        )
+        .then(() => {
+          console.log('Email sent successfully!');
+        })
+        .catch((error) => {
+          console.error('Failed to send email:', error);
+        });
+      };
 
     const [showForm, setShowForm] = useState(false);
 
@@ -42,7 +61,7 @@ const Careers = () => {
 
             </div>
             {showForm && <div className='apply-form-wrapper' style={{ height: showForm ? 'auto' : '0px' }}>
-                <form>
+                <form onSubmit={sendEmail} className='careers-apply-form'>
                     <h2>Apply Now</h2>
                     <div>
                         {/* <label htmlFor="name">Name:</label> */}
@@ -59,7 +78,7 @@ const Careers = () => {
 
                     <div>
                         {/* <label htmlFor="license">Do you have a valid drivers license?</label> */}
-                        <select id="license" name="license">
+                        <select id="license" name="has_dl">
                             <option value="">Do you have a valid drivers license?</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
@@ -67,7 +86,7 @@ const Careers = () => {
                     </div>
                     <div>
                         {/* <label htmlFor="transportation">Do you have a reliable transportation?</label> */}
-                        <select id="transportation" name="transportation">
+                        <select id="transportation" name="has_transpo">
                             <option value="">Do you have reliable transportation?</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
@@ -75,7 +94,7 @@ const Careers = () => {
                     </div>
                     <div>
                         {/* <label htmlFor="experience">Do you have prior experience in construction and/or tile installation?</label> */}
-                        <select id="experience" name="experience">
+                        <select id="experience" name="has_exp">
                             <option value="">Do you have prior experience in construction and/or tile installation?</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
@@ -83,7 +102,7 @@ const Careers = () => {
                     </div>
                     <div>
                         {/* <label htmlFor="schedule">Are you able to work in the Baltimore, MD area daily Monday-Friday?</label> */}
-                        <select id="schedule" name="schedule">
+                        <select id="schedule" name="meets_sched_reqs">
                             <option value="">Are you able to work in the Baltimore, MD area daily Monday-Friday?</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
