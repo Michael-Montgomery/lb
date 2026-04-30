@@ -1,7 +1,7 @@
 let reviews = [
     {
-        name: 'John Doe',
-        review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        // name: 'John Doe',
+        review: 'I cannot say enough great things about LB Tile. They just completed a back splash in my kitchen. It is not only beautiful but the workmanship is QUALITY! They show up on time, answer all my questions, and they are super nice guys too. Planning my next project of a built in mudroom area with them.',
         rating: 5 
     },
     {

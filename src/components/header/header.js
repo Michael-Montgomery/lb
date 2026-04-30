@@ -29,7 +29,7 @@ const Header = () => {
         </NavLink>
         <div className="nav-links">
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">About</NavLink>
+          {/* <NavLink to="/#home-intro">About</NavLink> */}
           <NavLink to="/careers">Careers</NavLink>
           <NavLink to="/gallery">Gallery</NavLink>
           <NavLink to="/contact">Contact</NavLink>
@@ -40,7 +40,7 @@ const Header = () => {
       {mobileMenuOpen && (
         <div className="mobile-nav-links" style={{ height: mobileMenuOpen ? '200px' : '0' }}>
           <NavLink to="/" onClick={() => setMobileMenuOpen(false)}>Home</NavLink>
-          <NavLink to="/about" onClick={() => setMobileMenuOpen(false)}>About</NavLink>
+          {/* <NavLink to="/about" onClick={() => setMobileMenuOpen(false)}>About</NavLink> */}
           <NavLink to="/careers" onClick={() => setMobileMenuOpen(false)}>Careers</NavLink>
           <NavLink to="/gallery" onClick={() => setMobileMenuOpen(false)}>Gallery</NavLink>
           <NavLink to="/contact" onClick={() => setMobileMenuOpen(false)}>Contact</NavLink>

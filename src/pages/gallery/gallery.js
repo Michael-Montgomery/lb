@@ -36,15 +36,15 @@ const filterGallery = (e, isDropdown) => {
             <li onClick={(e) => {
                 filterGallery(e);
             }}>Bathroom</li>
-            <li onClick={(e) => {
+            {/* <li onClick={(e) => {
                 filterGallery(e);
             }}>Fireplace</li>
             <li onClick={(e) => {
                 filterGallery(e);
-            }}>Outdoor</li>
+            }}>Outdoor</li> */}
             <li onClick={(e) => {
                 filterGallery(e);
-            }}>Commercial</li>
+            }}>Other</li>
            </ul>
            <select onChange={(e) => {
                 filterGallery(e);
@@ -61,7 +61,7 @@ const filterGallery = (e, isDropdown) => {
                 <ul className='gallery-images-list'>
                 {galleryDisplayList.map((item, index) => (
                 // <div className='gallery-image' style={{backgroundImage: `url(${item.imgUrl})`}} key={index}></div>
-                <li>
+                <li key={index} className="gallery-image-item">
                     <div className='gallery-image' style={{backgroundImage: `url(${item.imgUrl})`}} key={index}></div>
                 </li>
                 ))}

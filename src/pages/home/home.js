@@ -27,14 +27,31 @@ const Home = () => {
         <>
             <Header />
             <div className='home-hero-wrapper'></div>
-            <div style={{ padding: '20px', textAlign: 'center' }} className='home-intro-wrapper'>
+            <div style={{ padding: '20px', textAlign: 'center' }} className='home-intro-wrapper' id='home-intro'>
                 <h1>LB Tile Company</h1><p>
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                </p>
+                    Founded in 1982, LB  Tile Co has been delivering an array of custom home improvement services to its clients in the Mid-Atlantic. A family owned company now in it’s second generation, LB Tile Co is a trusted advisor and partner for your next project.
+
+                    Specializing in custom tile work for bathrooms and kitchens, our team can also design and deliver your dream home or next renovation. Our mission is to provide superior craftsmanship and deliver exceptional results, with the same attention to projects since our first one, over 35 years ago!
+
+                    Our services include, but are not limited to:
+
+                    
+                    {/* - Kitchen remodeling
+                    - Bathroom remodeling
+                    - Custom tile
+                    - Flooring
+                    - Home additions and general remodels
+                    - Roofing
+
+                    Contact us today to discuss your project. */}
+                </p><ol>
+                        <li>Kitchen remodeling</li>
+                        <li>Bathroom remodeling</li>
+                        <li>Custom tile</li>
+                        <li>Flooring</li>
+                        <li>Home additions and general remodels</li>
+                        <li>Roofing</li>
+                    </ol>
                 <ul>
                     <li>
                         <button className='home-cta-button' onClick={handleGetQuoteClick}>Get a Quote</button>
@@ -63,7 +80,7 @@ const Home = () => {
             <div className='cx-reviews-wrapper'>
                 <h2>What Our Clients are Saying</h2>
                 <div className='cx-review-item'>
-                    
+
                     <ul className='cx-reviews-list'>
                         {reviews.map((review, index) => (
                             <li key={index} className="review-item">
