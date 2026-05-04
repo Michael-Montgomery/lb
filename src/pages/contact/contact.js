@@ -8,6 +8,8 @@ import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import emailjs from '@emailjs/browser';
 import { useNavigate } from 'react-router-dom';
 
+const messageMaxLength = 250;
+
 
 
 
@@ -19,6 +21,7 @@ const navigate = useNavigate();
 
 
     const [showForm, setShowForm] = useState(true);
+    const [message, setMessage] = useState('jkljk');
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -40,6 +43,16 @@ const navigate = useNavigate();
       };
 
 
+      const updateMessage = (e) => {
+        console.log(e.target.value);
+        const newMessage = e.target.value;
+        console.log(newMessage);
+        if (newMessage.length <= messageMaxLength) {
+          setMessage(newMessage);
+        }
+      };
+
+
 
 
 
@@ -54,16 +67,17 @@ const navigate = useNavigate();
             
            <div>
                {/* <label htmlFor="name">Name:</label> */}
-               <input type="text" id="name" name="name" placeholder='Name'/>
+               <input type="text" id="name" name="name" placeholder='Name' required minLength={4} maxLength={30}/>
            </div>
            <div>
                {/* <label htmlFor="email">Email:</label> */}
-               <input type="email" id="email" name="email" placeholder='Email'/>
+               <input type="email" id="email" name="email" placeholder='Email' required minLength={4} maxLength={40}/>
            </div>
            <div>
                {/* <label htmlFor="message">Message:</label> */}
-               <textarea id="message" name="message" placeholder='Your message here...'></textarea>
+               <textarea id="message" name="message" value={message} placeholder='Your message here...' maxLength={messageMaxLength} onChange={updateMessage}></textarea>
            </div>
+           <p className='msg-char-count' style={{backgroundColor: message.length === messageMaxLength ? '#FF605C' : message.length > 230 ? '#FFBD44' : 'var(--primary-color)'}}>{`${message.length}/${messageMaxLength}`}</p>
            <button type="submit">Submit</button>
        </form>
            }

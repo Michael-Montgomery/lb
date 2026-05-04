@@ -65,20 +65,20 @@ const Careers = () => {
                     <h2>Apply Now</h2>
                     <div>
                         {/* <label htmlFor="name">Name:</label> */}
-                        <input type="text" id="name" name="name" placeholder='Name' />
+                        <input type="text" id="name" name="name" placeholder='Name' required minLength={4} maxLength={35}/>
                     </div>
                     <div>
                         {/* <label htmlFor="email">Email:</label> */}
-                        <input type="email" id="email" name="email" placeholder='Email' />
+                        <input type="email" id="email" name="email" placeholder='Email' minLength={4} maxLength={35}/>
                     </div>
                     <div>
                         {/* <label htmlFor="phone">Phone:</label> */}
-                        <input type="tel" id="phone" name="phone" placeholder='Phone' />
+                        <input type="tel" id="phone" name="phone" placeholder='Phone' required/>
                     </div>
 
                     <div>
                         {/* <label htmlFor="license">Do you have a valid drivers license?</label> */}
-                        <select id="license" name="has_dl">
+                        <select id="license" name="has_dl" required>
                             <option value="">Do you have a valid drivers license?</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
@@ -86,7 +86,7 @@ const Careers = () => {
                     </div>
                     <div>
                         {/* <label htmlFor="transportation">Do you have a reliable transportation?</label> */}
-                        <select id="transportation" name="has_transpo">
+                        <select id="transportation" name="has_transpo" required>
                             <option value="">Do you have reliable transportation?</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
@@ -94,7 +94,7 @@ const Careers = () => {
                     </div>
                     <div>
                         {/* <label htmlFor="experience">Do you have prior experience in construction and/or tile installation?</label> */}
-                        <select id="experience" name="has_exp">
+                        <select id="experience" name="has_exp" required>
                             <option value="">Do you have prior experience in construction and/or tile installation?</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
@@ -102,7 +102,7 @@ const Careers = () => {
                     </div>
                     <div>
                         {/* <label htmlFor="schedule">Are you able to work in the Baltimore, MD area daily Monday-Friday?</label> */}
-                        <select id="schedule" name="meets_sched_reqs">
+                        <select id="schedule" name="meets_sched_reqs" required>
                             <option value="">Are you able to work in the Baltimore, MD area daily Monday-Friday?</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>

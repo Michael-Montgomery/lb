@@ -40,7 +40,23 @@
     width: 80%;
     height: 150px;
     border: 2px solid var(--primary-color);
+    outline: none;
     resize: none;
+}
+
+.msg-char-count {
+    text-align: right;
+    margin-bottom: 1rem;
+    color: white;
+    font-size: 0.9rem;
+    padding: 3px 6px;
+    width: fit-content;
+    float: right;
+    border-radius: 12px;
+    margin-left: 85%;
+    margin-top: 0;
+    margin-bottom: 40px;
+
 }
 
 .contact-page-wrapper form button {
