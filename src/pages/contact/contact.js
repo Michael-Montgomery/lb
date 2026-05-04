@@ -21,7 +21,7 @@ const navigate = useNavigate();
 
 
     const [showForm, setShowForm] = useState(true);
-    const [message, setMessage] = useState('jkljk');
+    const [message, setMessage] = useState('');
 
     const sendEmail = (e) => {
         e.preventDefault();
