@@ -109,7 +109,7 @@ const Careers = () => {
                         </select>
                     </div>
 
-                    <button type="submit">Submit</button>
+                    <button className='career-submit-btn' type="submit">Submit</button>
                 </form>
             </div>}
 

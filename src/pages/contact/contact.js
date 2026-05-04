@@ -75,7 +75,7 @@ const navigate = useNavigate();
            </div>
            <div>
                {/* <label htmlFor="message">Message:</label> */}
-               <textarea id="message" name="message" value={message} placeholder='Your message here...' maxLength={messageMaxLength} onChange={updateMessage}></textarea>
+               <textarea id="message" name="message" value={message} placeholder='Your message here...' maxLength={messageMaxLength} onChange={updateMessage} required></textarea>
            </div>
            <p className='msg-char-count' style={{backgroundColor: message.length === messageMaxLength ? '#FF605C' : message.length > 230 ? '#FFBD44' : 'var(--primary-color)'}}>{`${message.length}/${messageMaxLength}`}</p>
            <button type="submit">Submit</button>
