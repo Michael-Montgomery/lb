@@ -18,14 +18,14 @@
 
 .home-intro-wrapper h1 {
     font-size: 3.5rem;
-    color: var(--primary-color);
+    color: black;
     margin-bottom: 1rem;
 }
 
 .home-intro-wrapper p {
     font-size: 1.8rem;
     line-height: 1.6;
-    color: var(--primary-color);
+    color: black;
     margin-bottom: 4rem;
     text-indent: 50px;
 }
@@ -71,7 +71,7 @@ ol {
 ol li {
     /* display: inline-block; */
     margin: 7px 1rem;
-    color: var(--primary-color);
+    color: black;
     font-size: 1.6em;
 }
 
@@ -131,14 +131,14 @@ ol li {
 .review-item p {
     font-size: .9rem;
     line-height: 1.5;
-    color: white;
+    color: black;
     margin-bottom: 1rem;
     
 }
 
 .review-item span {
     font-weight: 600;
-    color: white;
+    color: black;
     float: right;
     position: relative;
     right: 10vw;
@@ -149,7 +149,7 @@ ol li {
 .cx-reviews-wrapper h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color: var(--primary-color);
+    color: black;
 }
 
 .review-item {

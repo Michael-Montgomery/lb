@@ -37,6 +37,11 @@
     font-size: 1.8em;
 }
 
+.footer p {
+    /* color: black; */
+    
+}
+
 
 
 @media (max-width: 768px) {
