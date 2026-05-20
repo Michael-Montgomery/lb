@@ -25,7 +25,7 @@ const Header = () => {
     <header>
       <nav>
         <NavLink to="/">
-          <img alt="Center for Gov logo" src={logo} className="header-logo" />
+          <img alt="LB Tile logo" src={logo} className="header-logo" />
         </NavLink>
         <div className="nav-links">
           <NavLink to="/">Home</NavLink>
