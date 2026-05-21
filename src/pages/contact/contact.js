@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../../components/header/header';
 import './contact.css';
 import Footer from '../../components/footer/footer';
@@ -15,6 +15,10 @@ const messageMaxLength = 250;
 
 
 const Contact = () => {
+
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
 
 
 const navigate = useNavigate();

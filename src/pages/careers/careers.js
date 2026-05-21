@@ -2,11 +2,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Header from '../../components/header/header';
 import './careers.css';
 import { faDollarSign, faSun } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Footer from '../../components/footer/footer';
 import emailjs from '@emailjs/browser';
 
 const Careers = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
 
     const sendEmail = (e) => {

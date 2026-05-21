@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../../components/header/header';
 import './gallery.css';
 import gallery from '../../data/gallery';
 import Footer from '../../components/footer/footer';
 
 const Gallery = () => {
+
+useEffect(() => {
+    window.scrollTo(0, 0);
+}, []);
 
 const [galleryDisplayList, setGalleryDisplayList] = useState(gallery);
 
